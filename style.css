@@ -1,0 +1,120 @@
+/* Aplica imagem de fundo */
+body {
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: "Inter", serif;
+    color: rgb(7, 0, 0);
+    text-align: center;
+
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do título */
+h1 {
+    color: #2274f0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 70px;
+    margin: 80px;
+    margin-bottom: 35px;
+    
+    
+}
+
+
+
+/* Estilo do subtítulo */
+h2 {
+    color: rgb(204, 97, 204);
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    margin: 20px;
+    
+   
+
+}
+
+#logo-container {
+
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px; /* Espaço entre os ícones */
+    }
+    
+    a ion-icon {
+        font-size: 48px;
+        color: #6e5494; /* Cor para o GitHub */
+
+        
+    }
+    
+    a:hover ion-icon {
+        color: #00BFFF; /* Cor para o LinkedIn */
+    }
+    
+    a:nth-child(2) ion-icon {
+        color: #6e5494; /* Cor para o GitHub */
+    }
+    
+    a:nth-child(2):hover ion-icon {
+        color: #00BFFF; /* Cor para o GitHub */
+    }
+    
+    a:nth-child(3) ion-icon {
+        color: #6e5494; /* Cor padrão para o e-mail */
+    }
+    
+    a:nth-child(3):hover ion-icon {
+        color: #00BFFF; /* Cor para o e-mail ao passar o mouse */
+    }
+    
+
+
+
+/* Estilo do app */
+#app {
+    width: 80%;
+    max-width: 500px; /* Evita que fique muito largo */
+    margin: auto;
+    text-align: center;
+}
+
+input, button {  
+    margin: 10px 0;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex; /* Usa o flexbox para alinhar o checkbox e o texto */
+    align-items: center; /* Alinha o checkbox e o texto na vertical */
+    margin: 5px 0;
+    padding: 10px;
+    background: #eaeaea;
+    border-radius: 5px;
+    color: #2274f0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Espaço entre o checkbox e o texto */
+
+
+    
+    
+}
