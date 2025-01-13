@@ -112,9 +112,43 @@ li {
 }
 
 input[type="checkbox"] {
-    margin-right: 10px; /* Espaço entre o checkbox e o texto */
-
+    margin-right: 5px; /* Espaço entre o checkbox e o texto */
+    vertical-align: middle;
 
     
     
+}
+
+
+
+/* Estilo do botão de excluir */
+.delete-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 5px; /* Espaço entre a tarefa e o botão */
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff4d4d; /* Cor vermelha para o botão de excluir */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo do botão de excluir quando passa o mouse */
+.delete-btn:hover {
+    color: #ff0000;
+}
+
+/* Estilo do li (caixa da tarefa) */
+li {
+    display: flex;
+    justify-content: space-between; /* Espaça o conteúdo da tarefa */
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    background: #eaeaea;
+    border-radius: 5px;
+    color: #2274f0;
 }

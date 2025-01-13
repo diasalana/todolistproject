@@ -3,30 +3,44 @@ document.getElementById("addTaskBtn").addEventListener("click", function() {
     const taskList = document.getElementById("taskList");
   
     if (taskInput.value.trim() !== "") {
-        // Cria um novo item da lista
-        const li = document.createElement("li");
-        
-        // Cria o checkbox
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox"; // Tipo do input (checkbox)
-        
-        // Cria o texto da tarefa
-        const text = document.createTextNode(taskInput.value);
-        
-        // Adiciona o checkbox e o texto dentro do item da lista
-        li.appendChild(checkbox);
-        li.appendChild(text);
+      const li = document.createElement("li");
+      
+      // Criar checkbox
+      const checkBox = document.createElement("input");
+      checkBox.type = "checkbox";
+      checkBox.classList.add("task-check");
+      
+      // Criar texto da tarefa
+      const taskText = document.createElement("span");
+      taskText.textContent = taskInput.value;
+      
+      // Criar botão de excluir
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "delete"; // Ou podemos usar um ícone aqui
+      deleteButton.classList.add("delete-btn"); // Adiciona uma classe para estilizar o botão
+      
+      // Lógica para excluir a tarefa
+      deleteButton.addEventListener("click", () => {
+        li.remove();
+      });
+      
+      // Adicionar os elementos no li
+      li.appendChild(checkBox);
+      li.appendChild(taskText);
   
-        // Adiciona a funcionalidade de marcar como concluída
-        checkbox.addEventListener("change", function() {
-            if (checkbox.checked) {
-                li.classList.add("completed"); // Adiciona a classe "completed" quando o checkbox é marcado
-            } else {
-                li.classList.remove("completed"); // Remove a classe "completed" quando o checkbox é desmarcado
-            }
-        });
+      // Adicionar botão de excluir fora do li
+      const deleteWrapper = document.createElement("div");
+      deleteWrapper.classList.add("delete-wrapper");
+      deleteWrapper.appendChild(deleteButton);
   
-        taskList.appendChild(li);
-        taskInput.value = ""; // Limpa o campo de entrada
+      // Adiciona a tarefa e o botão de excluir ao taskList
+      taskList.appendChild(li);
+      li.appendChild(deleteWrapper); // Adiciona o botão de excluir fora da caixa
+
+      // Limpar o campo de entrada
+      taskInput.value = "";
     }
+
+    
 });
+
